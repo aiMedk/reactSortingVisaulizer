@@ -1,47 +1,78 @@
 
+
 export default function Merge(unSortedArray) {
 
-
-    
+    const animations = [];    
     if(unSortedArray.length <= 1) return unSortedArray;
-    
-    const middle = Math.floor(unSortedArray.length/2);
+    const auxArray  = unSortedArray.slice();
 
-    const leftArray= unSortedArray.slice(0, middle);
-
-    const rightArray= unSortedArray.slice(middle);
+    Helper(unSortedArray, 0, unSortedArray.length -1, auxArray, animations);
     
-    
-    return mergeSort(Merge(leftArray), Merge(rightArray));
+    return animations;
 }
 
-const animations = [];
 
-function mergeSort(leftArray, rightArray){
+function Helper(mainArray, startInd, endInd, auxArray, animations){
+
+    
+    if(startInd === endInd) return;
+
+    const middle = Math.floor((startInd + endInd)/2);
+    Helper(auxArray, startInd, middle, mainArray, animations);
+    Helper(auxArray, middle + 1, endInd, mainArray, animations);
+    mergeSort(mainArray, startInd, middle, endInd, auxArray, animations)    
+
+}
 
 
-    let resultArray = [], leftIndex = 0, rightIndex = 0;
+function mergeSort(mainArray, startInd, middle, endInd, auxArray, animations){
 
-    while(leftIndex < leftArray.length && rightIndex < rightArray.length){
-
-        animations.push(leftArray);
-            
-
-        // animations.push([mainArray.indexOf(leftArray[leftIndex]),mainArray.indexOf(rightIndex[rightIndex])]);
-
-        // animations.push([mainArray.indexOf(leftArray[leftIndex]),mainArray.indexOf(rightIndex[rightIndex])]);
-
-        if(leftArray[leftIndex] < rightArray[rightIndex]){
-            resultArray.push(leftArray[leftIndex]);
-             
-            leftIndex++;
-        }
-        else{
-            resultArray.push(rightArray[rightIndex]);
-            rightIndex++;
-        }
+    let k = startInd;
+  let i = startInd;
+  let j = middle + 1;
+  while (i <= middle && j <= endInd) {
+    // These are the values that we're comparing; we push them once
+    // to change their color.
+    animations.push([i, j]);
+    // These are the values that we're comparing; we push them a second
+    // time to revert their color.
+    animations.push([i, j]);
+    if (auxArray[i] <= auxArray[j]) {
+      // We overwrite the value at index k in the original array with the
+      // value at index i in the auxiliary array.
+      animations.push([k, auxArray[i]]);
+      mainArray[k++] = auxArray[i++];
+    } else {
+      // We overwrite the value at index k in the original array with the
+      // value at index j in the auxiliary array.
+      animations.push([k, auxArray[j]]);
+      mainArray[k++] = auxArray[j++];
     }
+  }
+  while (i <= middle) {
+    // These are the values that we're comparing; we push them once
+    // to change their color.
+    animations.push([i, i]);
+    // These are the values that we're comparing; we push them a second
+    // time to revert their color.
+    animations.push([i, i]);
+    // We overwrite the value at index k in the original array with the
+    // value at index i in the auxiliary array.
+    animations.push([k, auxArray[i]]);
+    mainArray[k++] = auxArray[i++];
+  }
+  while (j <= endInd) {
+    // These are the values that we're comparing; we push them once
+    // to change their color.
+    animations.push([j, j]);
+    // These are the values that we're comparing; we push them a second
+    // time to revert their color.
+    animations.push([j, j]);
+    // We overwrite the value at index k in the original array with the
+    // value at index j in the auxiliary array.
+    animations.push([k, auxArray[j]]);
+    mainArray[k++] = auxArray[j++];
+  }
 
-return resultArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 
 }
