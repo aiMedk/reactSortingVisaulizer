@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/aiMedk/reactSortingVisaulizer/static/css/main.39eadb64.chunk.css",
-    "main.js": "/aiMedk/reactSortingVisaulizer/static/js/main.c25cdb15.chunk.js",
-    "main.js.map": "/aiMedk/reactSortingVisaulizer/static/js/main.c25cdb15.chunk.js.map",
-    "runtime-main.js": "/aiMedk/reactSortingVisaulizer/static/js/runtime-main.7dd822ee.js",
-    "runtime-main.js.map": "/aiMedk/reactSortingVisaulizer/static/js/runtime-main.7dd822ee.js.map",
-    "static/js/2.29f23e18.chunk.js": "/aiMedk/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js",
-    "static/js/2.29f23e18.chunk.js.map": "/aiMedk/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js.map",
-    "index.html": "/aiMedk/reactSortingVisaulizer/index.html",
-    "precache-manifest.9d7a9ff971911b1cafff28202fbe7c4f.js": "/aiMedk/reactSortingVisaulizer/precache-manifest.9d7a9ff971911b1cafff28202fbe7c4f.js",
-    "service-worker.js": "/aiMedk/reactSortingVisaulizer/service-worker.js",
-    "static/css/main.39eadb64.chunk.css.map": "/aiMedk/reactSortingVisaulizer/static/css/main.39eadb64.chunk.css.map",
-    "static/js/2.29f23e18.chunk.js.LICENSE.txt": "/aiMedk/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js.LICENSE.txt"
+    "main.css": "/reactSortingVisaulizer/static/css/main.39eadb64.chunk.css",
+    "main.js": "/reactSortingVisaulizer/static/js/main.d7c8966c.chunk.js",
+    "main.js.map": "/reactSortingVisaulizer/static/js/main.d7c8966c.chunk.js.map",
+    "runtime-main.js": "/reactSortingVisaulizer/static/js/runtime-main.ad79aba6.js",
+    "runtime-main.js.map": "/reactSortingVisaulizer/static/js/runtime-main.ad79aba6.js.map",
+    "static/js/2.29f23e18.chunk.js": "/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js",
+    "static/js/2.29f23e18.chunk.js.map": "/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js.map",
+    "index.html": "/reactSortingVisaulizer/index.html",
+    "precache-manifest.f7bb1976ef04106e7dd42ebe0781989f.js": "/reactSortingVisaulizer/precache-manifest.f7bb1976ef04106e7dd42ebe0781989f.js",
+    "service-worker.js": "/reactSortingVisaulizer/service-worker.js",
+    "static/css/main.39eadb64.chunk.css.map": "/reactSortingVisaulizer/static/css/main.39eadb64.chunk.css.map",
+    "static/js/2.29f23e18.chunk.js.LICENSE.txt": "/reactSortingVisaulizer/static/js/2.29f23e18.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7dd822ee.js",
+    "static/js/runtime-main.ad79aba6.js",
     "static/js/2.29f23e18.chunk.js",
     "static/css/main.39eadb64.chunk.css",
-    "static/js/main.c25cdb15.chunk.js"
+    "static/js/main.d7c8966c.chunk.js"
   ]
 }
